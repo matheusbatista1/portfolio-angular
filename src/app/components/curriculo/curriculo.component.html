@@ -1,0 +1,86 @@
+<div class="container" id="container-curriculo">
+
+  <ul class="caminho">
+    <li><a href="/">Home</a></li>
+    <li> > </li>
+    <li class="caminho__atual">Currículo</li>
+  </ul>
+
+  <h1>{{ tituloPagina }}</h1>
+
+  <section>
+    <h2>Dados Pessoais</h2>
+    <hr>
+    <img [src]="dadosPessoais.foto" alt="Foto de Matheus Batista">
+    <h3>Nome:</h3>
+    <p>{{ dadosPessoais.nome }}</p>
+    <h3>Data de Nascimento:</h3>
+    <p>{{ dadosPessoais.dataNascimento }}</p>
+    <h3>Residência:</h3>
+    <p>{{ dadosPessoais.residencia }}</p>
+    <h3>Idiomas:</h3>
+    <ul>
+      <li *ngFor="let idioma of dadosPessoais.idiomas">{{ idioma.nome }} ({{ idioma.nivel }})</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sobre Mim</h2>
+    <hr>
+    <p *ngFor="let paragrafo of sobreMim">{{ paragrafo }}</p>
+  </section>
+
+  <section>
+    <h2>Formação Acadêmica</h2>
+    <hr>
+    <div *ngFor="let item of formacaoAcademica">
+      <h3>{{ item.curso }}</h3>
+      <p>{{ item.titulo }} - {{ item.instituicao }}<br>{{ item.periodo }}</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experiência de Trabalho</h2>
+    <hr>
+    <div *ngFor="let item of experienciaTrabalho">
+      <h3>{{ item.cargo }}</h3>
+      <p>{{ item.empresa }} - {{ item.local }}<br>{{ item.periodo }}</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Habilidades Interpessoais</h2>
+    <hr>
+    <ul>
+      <li *ngFor="let habilidade of habilidadesInterpessoais">{{ habilidade }}</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Habilidades</h2>
+    <hr>
+    <div *ngFor="let habilidade of habilidades">
+      <h3>{{ habilidade.nome }}</h3>
+      <p>{{ habilidade.descricao }}</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Certificações</h2>
+    <hr>
+    <div *ngFor="let certificado of certificacoes">
+      <h3>{{ certificado.nome }}</h3>
+      <p>{{ certificado.descricao }}</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <hr>
+    <p>{{ contato.email }}</p>
+    <p>{{ contato.telefone }}</p>
+  </section>
+
+  <a class="back-link" href="/">&larr; Voltar ao início</a>
+
+</div>

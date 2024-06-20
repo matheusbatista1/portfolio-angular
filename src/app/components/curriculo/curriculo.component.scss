@@ -1,0 +1,35 @@
+@import '../../../styles.scss';
+
+#container-curriculo{
+  padding-bottom: 300px;
+  img{
+      float: left;
+      width: 280px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+  }
+  p{
+      text-align: justify;
+  }
+}
+
+@media (max-width:$breakpoint-lg) {
+  #container-curriculo{
+      padding-bottom: 480px;
+      p{
+          text-align: left;
+          line-height: 30px;
+      }
+      img{
+          float: none;
+          max-width: 100%;
+          margin-right: 0px;
+      }
+  }
+}
+
+@media (max-width: 375px){
+  #container-curriculo{
+      padding-bottom: 520px;
+  }
+}

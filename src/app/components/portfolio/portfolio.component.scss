@@ -1,0 +1,64 @@
+@import '../../../styles.scss';
+
+#container-portfolio{
+  padding-bottom: 300px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+.miniatura{
+  width: 320px;
+  height: 320px;
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-size: contain;
+  overflow: hidden;
+  animation: mudaCor 5s infinite;
+}
+.blackbox{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1%;
+  padding-top: 120px;
+  transition: 1s;
+  &:hover{
+      opacity: 0.8;
+      transition: 1s;
+  }
+  &-text{
+      text-align: center;
+      h1{
+          font-size: 16px;
+          color: $cor-selecao;
+          text-transform: uppercase;
+          margin-top: 0;
+      }
+      h2{
+          text-transform: none;
+          font-weight: 200;
+          margin-top: 0;
+      }
+  }
+}
+
+@media (max-width:$breakpoint-lg) {
+  #container-portfolio{
+      padding-bottom: 480px;
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+  .miniatura{
+      max-width: 100%;
+      background-size: auto 100%;
+  }
+  .blackbox{
+      opacity: 0.8;
+  }
+}
+
+@media (max-width: 375px){
+  #container-portfolio{
+      padding-bottom: 520px;
+  }
+}

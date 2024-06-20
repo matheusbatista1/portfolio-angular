@@ -1,0 +1,31 @@
+<header class="cabecalho">
+  <div class="container-cabecalho">
+    <nav id="menu-principal" [class.menujs]="isMenuOpen" class="menu-principal">
+      <ul class="menu-principal__lista">
+        <li class="logo-li">
+          <a href="/" class="logo">
+            <img src="../../../../assets/img/mb__4.png" alt="Logo">
+          </a>
+        </li>
+        <li>
+          <a href="/" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Home</a>
+        </li>
+        <li>
+          <a href="/portfolio" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Portfolio</a>
+        </li>
+        <li>
+          <a href="/curriculo" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Currículo</a>
+        </li>
+        <li>
+          <a href="/repositorios" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Repositórios</a>
+        </li>
+        <li>
+          <a href="/contato" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Contato</a>
+        </li>
+        <li class="threeline-icon" id="menu-toggle" (click)="toggleMenu()">
+          {{ isMenuOpen ? '&Cross;' : '&#9776;' }}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

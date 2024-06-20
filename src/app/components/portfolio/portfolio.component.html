@@ -1,0 +1,25 @@
+<div class="container" id="container-portfolio">
+
+  <ul class="caminho">
+    <li><a href="/">Home</a></li>
+    <li> > </li>
+    <li class="caminho__atual">Portfolio</li>
+  </ul>
+
+  <h1>Portfolio</h1>
+
+  <div *ngFor="let projeto of projetos" class="miniatura" [style.backgroundImage]="'url(' + projeto.imagem + ')'">
+    <a [href]="projeto.link">
+      <div class="blackbox">
+        <div class="blackbox-text">
+          <h1>{{ projeto.nome }}</h1>
+          <h2>{{ projeto.descricao }}</h2>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <br>
+  <a class="back-link" href="/">&larr; Voltar ao início</a>
+
+</div>

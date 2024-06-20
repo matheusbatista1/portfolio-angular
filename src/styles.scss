@@ -1,1 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Courier Prime";
+  src: url('./assets/fonts/Courier_Prime/CourierPrime-Regular.ttf');
+}
+@font-face {
+  font-family: "Courier Prime";
+  src: url('./assets/fonts/Courier_Prime/CourierPrime-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Courier Prime";
+  src: url('./assets/fonts/Courier_Prime/CourierPrime-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Courier Prime";
+  src: url('./assets/fonts/Courier_Prime/CourierPrime-Italic.ttf');
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$cor-selecao: #66CED6;
+$cor-cabecalho: #294B66;
+$cor-fundo: #172B3A;
+$cor-rodape: #060b0f;
+$cor-github: #0d1117;
+
+*{
+  color: white;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  a{
+      text-decoration: none;
+  }
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom, $cor-fundo, $cor-rodape);
+  font-family: 'Montserrat', monospace;
+  font-weight: 200;
+  position: relative;
+  min-height: 100vh;
+}
+
+.container{
+  animation-name: conteudo;
+  animation-duration: 2s;
+
+  padding: 80px 300px 80px 300px;
+  font-weight: normal;
+  h2{
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-top: 40px;
+  }
+  h3{
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $cor-selecao;
+  }
+  p{
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 24px;
+  }
+}
+
+@media (max-width:$breakpoint-lg) {
+  .container{
+      padding: 10px 5% 40px 5%;
+  }
+}
+
+.caminho{
+  list-style: none;
+  padding-left: 0;
+  color: $cor-selecao;
+  li{
+      display: inline-block;
+  }
+  &__atual{
+      color: $cor-selecao;
+  }
+}
+
+@media (max-width:$breakpoint-lg) {
+  .caminho{
+      li{
+          font-size: 13px;
+      }
+  }
+}
+
+@keyframes profile_capa {
+  0% {opacity: 0; transform: translate(0px, 20px);}
+  100% {opacity: 1; transform: translate(0px, 0px);}
+}
+
+@keyframes profile_title {
+  0% {opacity: 0; transform: translate(0px, -20px);}
+  100% {opacity: 1; transform: translate(0px, 0px);}
+}
+
+@keyframes conteudo {
+  0% {opacity: 0; transform: translate(-20px, 0px);}
+  100% {opacity: 1; transform: translate(0px, 0px);}
+}
+
+@keyframes navigation {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes mudaCor{
+  0%{
+      background-color: rgb(43, 44, 126);
+  }
+  50%{
+      background-color: rgb(79, 144, 182);
+  }
+  100%{
+      background-color: rgb(8, 8, 49);
+  }
+}

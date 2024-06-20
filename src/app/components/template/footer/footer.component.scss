@@ -1,0 +1,74 @@
+@import '../../../../styles.scss';
+
+#direitos-autorais{
+  margin-top: 0px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.rodape{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(to top, black, $cor-fundo);
+
+  .container-rodape{
+      width: 80%;
+      position: relative;
+      margin: 0 auto;
+  }
+
+  &__linha-1{
+      background-size: cover;
+      overflow: auto;
+      font-size: 13px;
+      p{
+          margin-top: 20px;
+          text-align: justify;
+      }
+  }
+  &__coluna{
+      margin-top: 10px;
+      margin-bottom: 25px;
+      float: left;
+      width: 33.333%;
+      padding: 0 15px;
+      li{
+          font-weight: 400;
+      }
+  }
+  &__titulo{
+      border-bottom: 1px solid #fff;
+      padding: 0 10px 10px 10px;
+      font-size: 14px;
+  }
+  &__lista-link{
+      padding: 0;
+      list-style: none;
+  }
+  &__lista-link__item{
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: block;
+      &::before{
+          content: '>';
+          margin-right: 8px;
+          color: $cor-selecao;
+      }
+  }
+}
+
+@media (max-width:$breakpoint-lg) {
+  #direitos-autorais{
+      font-size: 70%;
+  }
+  .rodape{
+      .container-rodape{
+          width: 90%;
+      }
+      &__coluna{
+          margin: auto;
+          float: none;
+          width: 100%;
+      }
+  }
+}
