@@ -1,0 +1,39 @@
+@import '../../../../styles.scss';
+
+#container-scc-19{
+  padding-bottom: 300px;
+  text-align: center;
+  h1{
+      text-align: center;
+  }
+  h2, p{
+      text-align: justify;
+  }
+  .caminho{
+      text-align: left;
+  }
+  .foto-trabalhos{
+      width: 70%;
+      margin-bottom: 10px;
+      margin-top: 10px;
+  }
+  .back-link{
+      display: flex;
+  }
+}
+
+@media (max-width:$breakpoint-lg) {
+  #container-scc-19{
+      padding-bottom: 480px;
+      text-align: left;
+      .foto-trabalhos{
+          width: 100%;
+      }
+  }
+}
+
+@media (max-width: 375px){
+  #container-scc-19{
+      padding-bottom: 520px;
+  }
+}

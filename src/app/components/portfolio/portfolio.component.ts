@@ -15,25 +15,25 @@ export class PortfolioComponent {
       nome: 'Sistema de Cadastro COVID-19',
       descricao: 'Desenvolvido em C',
       imagem: '../../../assets/img/projects/scc-19/capa-scc-19.png',
-      link: '/scc-19'
+      link: 'portfolio/scc19'
     },
     {
       nome: 'CalcPricing',
       descricao: 'Desenvolvido em JavaScript',
       imagem: '../../../assets/img/projects/calcpricing/capa-calcpricing.png',
-      link: '/calcpricing'
+      link: 'portfolio/calcpricing'
     },
     {
       nome: 'Calculadora de IMC',
       descricao: 'Desenvolvido em JavaScript',
       imagem: '../../../assets/img/projects/calculadoraIMC/capa-calculadoraIMC.png',
-      link: '/calculadoraIMC'
+      link: 'portfolio/calculadora-imc'
     },
     {
       nome: 'Calculadora M.B.',
       descricao: 'Desenvolvido em C#',
       imagem: '../../../assets/img/projects/calculadoraMB/capa-calculadoraMB.png',
-      link: '/calculadoraMB'
+      link: 'portfolio/calculadora-mb'
     }
   ];
 

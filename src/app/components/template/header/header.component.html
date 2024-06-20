@@ -8,19 +8,19 @@
           </a>
         </li>
         <li>
-          <a href="/" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Home</a>
+          <a href="/" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/'">Home</a>
         </li>
         <li>
-          <a href="/portfolio" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Portfolio</a>
+          <a href="/portfolio" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/portfolio'">Portfolio</a>
         </li>
         <li>
-          <a href="/curriculo" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Currículo</a>
+          <a href="/curriculo" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/curriculo'">Currículo</a>
         </li>
         <li>
-          <a href="/repositorios" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Repositórios</a>
+          <a href="/repositorios" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/repositorios'">Repositórios</a>
         </li>
         <li>
-          <a href="/contato" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Contato</a>
+          <a href="/contato" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/contato'">Contato</a>
         </li>
         <li class="threeline-icon" id="menu-toggle" (click)="toggleMenu()">
           {{ isMenuOpen ? '&Cross;' : '&#9776;' }}

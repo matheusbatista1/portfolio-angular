@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,24 @@ import { Component, Input } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   @Input() tituloPagina: string = '';
   isMenuOpen = false;
+  currentRoute: string;
 
-  toggleMenu() {
+  constructor(private router: Router) {
+    this.currentRoute = '';
+  }
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.urlAfterRedirects;
+      }
+    });
+  }
+
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 }
