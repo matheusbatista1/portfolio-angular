@@ -28,10 +28,11 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
-$cor-selecao: #66CED6;
-$cor-cabecalho: #294B66;
-$cor-fundo: #172B3A;
-$cor-rodape: #060b0f;
+$cor-selecao: #aa3434;
+$cor-cabecalho: #0d0d17;
+$cor-fundo: #0a080e;
+$cor-fundo-oposto: #aa343427;
+$cor-rodape: #0d0d17;
 $cor-github: #0d1117;
 
 *{
@@ -50,11 +51,21 @@ img{
 body{
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to bottom, $cor-fundo, $cor-rodape);
+  background-color: $cor-fundo;
   font-family: 'Montserrat', monospace;
   font-weight: 200;
   position: relative;
   min-height: 100vh;
+}
+
+.fundo__geral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, $cor-fundo-oposto 50%, transparent 50%);
+  z-index: -9999;
 }
 
 .container{

@@ -1,8 +1,8 @@
+<div class="fundo__geral"></div>
 <div class="container" id="container-curriculo">
-
   <ul class="caminho">
-    <li><a href="/">Home</a></li>
-    <li> > </li>
+    <li><a routerLink="/">Home</a></li>
+    <li>></li>
     <li class="caminho__atual">Currículo</li>
   </ul>
 
@@ -18,10 +18,8 @@
     <p>{{ dadosPessoais.dataNascimento }}</p>
     <h3>Residência:</h3>
     <p>{{ dadosPessoais.residencia }}</p>
-    <h3>Idiomas:</h3>
-    <ul>
-      <li *ngFor="let idioma of dadosPessoais.idiomas">{{ idioma.nome }} ({{ idioma.nivel }})</li>
-    </ul>
+    <h3 style="clear: left">Idiomas:</h3>
+    <p *ngFor="let idioma of dadosPessoais.idiomas">{{ idioma.nome }} ({{ idioma.nivel }})</p>
   </section>
 
   <section>
@@ -30,47 +28,57 @@
     <p *ngFor="let paragrafo of sobreMim">{{ paragrafo }}</p>
   </section>
 
-  <section>
-    <h2>Formação Acadêmica</h2>
+  <section class="collapsible">
+    <h2 class="collapsible-header">Formação Acadêmica</h2>
     <hr>
-    <div *ngFor="let item of formacaoAcademica">
-      <h3>{{ item.curso }}</h3>
-      <p>{{ item.titulo }} - {{ item.instituicao }}<br>{{ item.periodo }}</p>
+    <div class="collapsible-conteudo">
+      <div class="collapsible-content" *ngFor="let item of formacaoAcademica">
+        <h3>{{ item.curso }}</h3>
+        <p>{{ item.titulo }} - {{ item.instituicao }}<br>{{ item.periodo }}</p>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Experiência de Trabalho</h2>
+  <section class="collapsible">
+    <h2 class="collapsible-header">Experiência de Trabalho</h2>
     <hr>
-    <div *ngFor="let item of experienciaTrabalho">
-      <h3>{{ item.cargo }}</h3>
-      <p>{{ item.empresa }} - {{ item.local }}<br>{{ item.periodo }}</p>
+    <div class="collapsible-conteudo">
+      <div class="collapsible-content" *ngFor="let item of experienciaTrabalho">
+        <h3>{{ item.cargo }}</h3>
+        <p>{{ item.empresa }} - {{ item.local }}<br>{{ item.periodo }}</p>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Habilidades Interpessoais</h2>
+  <section class="collapsible">
+    <h2 class="collapsible-header">Habilidades Interpessoais</h2>
     <hr>
-    <ul>
-      <li *ngFor="let habilidade of habilidadesInterpessoais">{{ habilidade }}</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Habilidades</h2>
-    <hr>
-    <div *ngFor="let habilidade of habilidades">
-      <h3>{{ habilidade.nome }}</h3>
-      <p>{{ habilidade.descricao }}</p>
+    <div class="collapsible-conteudo">
+      <div class="collapsible-content">
+        <p *ngFor="let habilidade of habilidadesInterpessoais">{{ habilidade }}</p>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Certificações</h2>
+  <section class="collapsible">
+    <h2 class="collapsible-header">Habilidades</h2>
     <hr>
-    <div *ngFor="let certificado of certificacoes">
-      <h3>{{ certificado.nome }}</h3>
-      <p>{{ certificado.descricao }}</p>
+    <div class="collapsible-conteudo">
+      <div class="collapsible-content" *ngFor="let habilidade of habilidades">
+        <h3>{{ habilidade.nome }}</h3>
+        <p>{{ habilidade.descricao }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="collapsible">
+    <h2 class="collapsible-header">Certificações</h2>
+    <hr>
+    <div class="collapsible-conteudo">
+      <div class="collapsible-content" *ngFor="let certificado of certificacoes">
+        <h3>{{ certificado.nome }}</h3>
+        <p>{{ certificado.descricao }}</p>
+      </div>
     </div>
   </section>
 
@@ -81,6 +89,5 @@
     <p>{{ contato.telefone }}</p>
   </section>
 
-  <a class="back-link" href="/">&larr; Voltar ao início</a>
-
+  <a class="back-link" routerLink="/">&larr; Voltar ao início</a>
 </div>

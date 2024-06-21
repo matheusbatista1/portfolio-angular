@@ -1,35 +1,84 @@
 @import '../../../styles.scss';
 
-#container-curriculo{
+#container-curriculo {
   padding-bottom: 300px;
-  img{
-      float: left;
-      width: 280px;
-      margin-right: 20px;
-      margin-bottom: 20px;
+  .back-link{
+    color: $cor-selecao;
   }
-  p{
-      text-align: justify;
+  img {
+    float: left;
+    width: 280px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .collapsible {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .collapsible-header {
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    background-color: $cor-fundo-oposto;
+    padding: 15px;
+  }
+
+  .collapsible-header::after {
+    content: '▶';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+  }
+
+  .collapsible.active .collapsible-header::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  .collapsible-content {
+    cursor: pointer;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.7s ease;
+    background-color: #dddddd2a;
+    h3, p{
+      padding-left: 20px;
+      padding-right: 10px;
+    }
+  }
+
+  .collapsible.active .collapsible-content {
+    max-height: 1000px;
+    transition: max-height 1s ease;
   }
 }
 
-@media (max-width:$breakpoint-lg) {
-  #container-curriculo{
-      padding-bottom: 480px;
-      p{
-          text-align: left;
-          line-height: 30px;
-      }
-      img{
-          float: none;
-          max-width: 100%;
-          margin-right: 0px;
-      }
+@media (max-width: $breakpoint-lg) {
+  #container-curriculo {
+    padding-bottom: 480px;
+
+    p {
+      text-align: left;
+      line-height: 30px;
+    }
+
+    img {
+      float: none;
+      max-width: 100%;
+      margin-right: 0px;
+    }
   }
 }
 
-@media (max-width: 375px){
-  #container-curriculo{
-      padding-bottom: 520px;
+@media (max-width: 375px) {
+  #container-curriculo {
+    padding-bottom: 520px;
   }
 }

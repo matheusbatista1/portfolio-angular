@@ -1,28 +1,41 @@
 <div id="container-repositorios" class="container">
   <ul class="caminho">
-      <li><a href="/">Home</a></li>
-      <li> > </li>
-      <li class="caminho__atual">Repositórios</li>
+    <li><a routerLink="/">Home</a></li>
+    <li> > </li>
+    <li class="caminho__atual">Repositórios</li>
   </ul>
 
   <h1>Repositórios do GitHub</h1>
-  <div id="repositorios">
-    <div *ngFor="let repo of repositorios" class="project">
+
+  <div id="repositorios-container" class="scroll-container">
+    <div id="repositorios">
+      <div *ngFor="let repo of repositoriosPaginados" class="project">
         <div>
-            <h4 class="project__title">{{ repo.name }}</h4>
-            <span class="project__date-create">{{ repo.created_at | date:'medium' }}</span>
+          <h4 class="project__title">{{ repo.name }}</h4>
+          <span class="project__date-create">{{ repo.created_at | date:'medium' }}</span>
         </div>
         <div>
-            <a href="{{ repo.html_url }}" target="_blank">{{ repo.html_url }}</a>
-            <span class="project__language"><span class="circle"></span>{{ repo.language }}</span>
+          <a href="{{ repo.html_url }}" target="_blank">{{ repo.html_url }}</a>
+          <span class="project__language"><span class="circle"></span>{{ repo.language }}</span>
         </div>
         <div>
-            <p>{{ repo.description }}</p>
+          <p>{{ repo.description }}</p>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+
+  <div class="pagination-container">
+    <ul class="pagination">
+      <li class="page-item" *ngFor="let page of getPaginationArray()">
+        <a class="page-link"
+           (click)="onPageChange(page)"
+           [class.active]="page === currentPage">{{ page }}</a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div id="back-link-repos" class="container">
-  <a id="back-link" class="back-link" href="/">&larr; Voltar ao início</a>
+  <a id="back-link" class="back-link" routerLink="/">&larr; Voltar ao início</a>
 </div>

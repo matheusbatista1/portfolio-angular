@@ -1,94 +1,143 @@
 @import '../../../styles.scss';
+#container-repositorios {
+  padding: 80px 10% 80px 10%;
 
-#back-link-repos{
-  padding: 10px 5% 40px 12%;
-  padding-bottom: 340px;
-  padding-top: 0;
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .pagination {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+
+  .page-item {
+    margin: 0 5px;
+  }
+
+  .page-link {
+    display: inline-block;
+    padding: 6px 12px;
+    color: $cor-selecao;
+    border: 1px solid $cor-selecao;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $cor-selecao;
+      color: #fff;
+    }
+
+    &.active {
+      background-color: $cor-selecao;
+      color: #fff;
+      pointer-events: none;
+    }
+  }
 }
-#repositorios{
+
+#repositorios-container {
+  max-height: 600px; /* Ajuste a altura máxima conforme necessário */
+  overflow-y: auto;
   background-color: $cor-github;
+  border: solid 1px $cor-selecao;
   border-radius: 6px;
   padding: 20px;
+  margin-top: 20px; /* Espaçamento opcional do topo */
 }
-#container-repositorios{
-  padding: 80px 10% 80px 10%;
-  .project{
-      border: 1px solid #30363d;
+#back-link-repos {
+  padding-top: 0;
+  padding-bottom: 380px;
+  .back-link{
+    color: $cor-selecao;
+  }
+}
+
+#repositorios {
+  .project {
+    border: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 6px;
+    margin: 20px;
+    h4 {
+      margin: 0;
+    }
+    div {
       display: flex;
-      flex-direction: column;
-      padding: 20px;
-      gap: 30px;
-      border-radius: 6px;
-      margin: 20px;
-      h4{
-          margin: 0;
-      }
-      div{
-          display: flex;
-          justify-content: space-between;
-      }
-      a{
-          color: #8b949e;
-      }
-      &__title{
-          color: #46a6f0;
-      }
-      &__date-create{
-          color: #8b949e;
-          border: 1px solid #8b949e;
-          border-radius: 20px;
-          padding: 5px 10px;
-          font-size: 0.9rem;
-      }
-      &__language .circle{
-          background-color: #46a6f0;
-          display: inline-block;
-          width: 12px;
-          height: 12px;
-          margin-right: 5px;
-          border: 1px solid #30363d;
-          border-radius: 50%;
-      }
+      justify-content: space-between;
+    }
+    a {
+      color: #8b949e;
+    }
+    &__title {
+      color: #46a6f0;
+    }
+    &__date-create {
+      color: #8b949e;
+      border: 1px solid #8b949e;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+    }
+    &__language .circle {
+      background-color: #46a6f0;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+      border: 1px solid #30363d;
+      border-radius: 50%;
+    }
   }
 }
 
-@media (max-width: 1080px){
-  #repositorios{
-      padding: 3px;
-      p{
-          font-size: 13px;
-      }
-      h4{
-          font-size: 13px;
-      }
-      a{
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          max-width: 50%;
-          font-size: 12px;
-      }
-      .project__date-create{
-          font-size: 10px;
-      }
+@media (max-width: 1080px) {
+  #repositorios {
+    padding: 3px;
+    p {
+      font-size: 13px;
+    }
+    h4 {
+      font-size: 13px;
+    }
+    a {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 50%;
+      font-size: 12px;
+    }
+    .project__date-create {
+      font-size: 10px;
+    }
   }
 }
 
-@media (max-width: $breakpoint-lg){
-  #back-link-repos{
-      padding-bottom: 480px;
-      padding-top: 0;
+@media (max-width: $breakpoint-lg) {
+  #back-link-repos {
+    padding-bottom: 480px;
+    color: $cor-selecao;
+    padding-top: 0;
   }
-  #container-repositorios{
-      padding: 10px 2% 40px 2%;
-      p{
-          line-height: 30px;
-      }
+  #container-repositorios {
+    padding: 10px 2% 40px 2%;
+    p {
+      line-height: 30px;
+    }
   }
 }
 
-@media (max-width: 375px){
-  #back-link-repos{
-      padding-bottom: 520px;
+@media (max-width: 375px) {
+  #back-link-repos {
+    padding-bottom: 520px;
+    color: $cor-selecao;
   }
 }

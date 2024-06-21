@@ -9,7 +9,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-image: linear-gradient(to top, black, $cor-fundo);
+  background-color: $cor-cabecalho;
+  border-top: solid 2px $cor-selecao;
 
   .container-rodape{
       width: 80%;
@@ -32,6 +33,7 @@
       float: left;
       width: 33.333%;
       padding: 0 15px;
+      font-weight: 300;
       li{
           font-weight: 400;
       }

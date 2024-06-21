@@ -1,27 +1,18 @@
+<!-- header.component.html -->
 <header class="cabecalho">
   <div class="container-cabecalho">
     <nav id="menu-principal" [class.menujs]="isMenuOpen" class="menu-principal">
       <ul class="menu-principal__lista">
         <li class="logo-li">
-          <a href="/" class="logo">
+          <a routerLink="/" class="logo">
             <img src="../../../../assets/img/mb__4.png" alt="Logo">
           </a>
         </li>
-        <li>
-          <a href="/" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/'">Home</a>
-        </li>
-        <li>
-          <a href="/portfolio" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/portfolio'">Portfolio</a>
-        </li>
-        <li>
-          <a href="/curriculo" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/curriculo'">Currículo</a>
-        </li>
-        <li>
-          <a href="/repositorios" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/repositorios'">Repositórios</a>
-        </li>
-        <li>
-          <a href="/contato" class="menu-principal__item" [class.menu-principal__item--atual]="currentRoute === '/contato'">Contato</a>
-        </li>
+        <li><a routerLink="/" class="menu-principal__item" routerLinkActive="menu-principal__item--atual" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a routerLink="/portfolio" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Portfolio</a></li>
+        <li><a routerLink="/curriculo" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Currículo</a></li>
+        <li><a routerLink="/repositorios" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Repositórios</a></li>
+        <li><a routerLink="/contato" class="menu-principal__item" routerLinkActive="menu-principal__item--atual">Contato</a></li>
         <li class="threeline-icon" id="menu-toggle" (click)="toggleMenu()">
           {{ isMenuOpen ? '&Cross;' : '&#9776;' }}
         </li>

@@ -1,7 +1,8 @@
+<div class="fundo__geral"></div>
 <div class="container" id="container-portfolio">
 
   <ul class="caminho">
-    <li><a href="/">Home</a></li>
+    <li><a routerLink="/">Home</a></li>
     <li> > </li>
     <li class="caminho__atual">Portfolio</li>
   </ul>
@@ -9,7 +10,7 @@
   <h1>Portfolio</h1>
 
   <div *ngFor="let projeto of projetos" class="miniatura" [style.backgroundImage]="'url(' + projeto.imagem + ')'">
-    <a [href]="projeto.link">
+    <a [routerLink]="projeto.link">
       <div class="blackbox">
         <div class="blackbox-text">
           <h1>{{ projeto.nome }}</h1>
@@ -20,6 +21,6 @@
   </div>
 
   <br>
-  <a class="back-link" href="/">&larr; Voltar ao início</a>
+  <a class="back-link" routerLink="/">&larr; Voltar ao início</a>
 
 </div>

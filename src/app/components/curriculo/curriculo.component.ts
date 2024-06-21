@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-curriculo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './curriculo.component.html',
-  styleUrl: './curriculo.component.scss'
+  styleUrls: ['./curriculo.component.scss']
 })
-export class CurriculoComponent {
+export class CurriculoComponent implements AfterViewInit {
   tituloPagina: string = "Currículo";
 
   dadosPessoais = {
@@ -25,16 +26,17 @@ export class CurriculoComponent {
   sobreMim = [
     'Desde jovem, nutri uma profunda paixão pela tecnologia, o que me levou a desenvolver uma afinidade inabalável com a informática em geral. Foi durante o meu primeiro encontro com o mundo do desenvolvimento de software que percebi que essa era a minha verdadeira vocação. Ali, encontrei o meio ideal para expressar minha criatividade, criando algo novo e resolvendo desafios complexos.',
     'Essa paixão me conduziu à minha jornada acadêmica, onde embarquei em um curso de Análise e Desenvolvimento de Sistemas. Durante esses anos, realizei diversos projetos de sucesso que me proporcionaram uma base sólida de conhecimento. Além disso, conquistei uma série de certificações em cursos relacionados ao desenvolvimento de software, fortalecendo ainda mais minha expertise.',
-    'Atualmente, continuo minha jornada de aprendizado, buscando aprimorar minhas habilidades por meio de estudos autodidatas, mantendo-me sempre atualizado nas mais recentes tendências tecnológicas. Meu objetivo é conquistar a oportunidade de crescer no mercado de trabalho, aplicando meu conjunto de conhecimentos em colaboração com equipes experientes, e contribuindo para o sucesso de projetos desafiadores.',
+    'Atualmente, continuo minha jornada de aprendizado, buscando aprimorar minhas habilidades por meio de estudos autodidatas, mantendo-me sempre atualizado nas mais recentes tendências tecnológicas. Meu objetivo é crescer no mercado de trabalho, aplicando meu conjunto de conhecimentos em colaboração com equipes experientes, e contribuindo para o sucesso de projetos desafiadores.',
     'Estou ansioso para enfrentar novos desafios e expandir minha carreira, sempre com a paixão pela tecnologia como minha bússola e a vontade de superar limites como meu motor.'
   ];
 
   formacaoAcademica = [
-    { curso: 'Análise e Desenvolvimento de Sistemas', titulo: 'Tecnólogo', instituicao: 'Universidade Paulista', periodo: '09/2022 - Em andamento' }
+    { curso: 'Análise e Desenvolvimento de Sistemas', titulo: 'Tecnólogo', instituicao: 'Universidade Paulista', periodo: '09/2022 - 09/2024' }
   ];
 
   experienciaTrabalho = [
-    { cargo: 'Desenvolvedor Front-End Jr', empresa: 'Doutores da Web | Grupo Ideal Trends', local: 'São Paulo, SP', periodo: '11/2023 - Atualmente' },
+    { cargo: 'Desenvolvedor Back-End Jr', empresa: 'Linked Tech', local: 'São Paulo, SP', periodo: '03/2024 - Atualmente' },
+    { cargo: 'Desenvolvedor Front-End Jr', empresa: 'Doutores da Web | Grupo Ideal Trends', local: 'São Paulo, SP', periodo: '11/2023 - 03/2024' },
     { cargo: 'Monitor de Desenvolvimento Infantil', empresa: 'Prefeitura Municipal de Itapevi', local: 'Itapevi, SP', periodo: '05/2022 - 11/2023' },
     { cargo: 'Operador de Loja', empresa: 'Grupo Pão de Açúcar', local: 'Santana de Parnaíba, SP', periodo: '08/2019 - 01/2021' }
   ];
@@ -73,11 +75,25 @@ export class CurriculoComponent {
     { nome: 'Métodos ágeis de A a Z: o curso completo', descricao: 'Udemy - 06/2023' },
     { nome: 'Curso completo de APIs com Nodejs, Express + MongoDB, SQL', descricao: 'Udemy - 06/2023' },
     { nome: 'Desenvolvimento Responsivo com HTML5, CSS3 e JavaScript', descricao: 'Udemy - 08/2023' },
-    { nome: 'Web Design Completo em HTML/CSS + Criação do seu Portfolio', descricao: 'Udemy - 10/2023' }
+    { nome: 'Web Design Completo em HTML/CSS + Criação do seu Portfolio', descricao: 'Udemy - 10/2023' },
   ];
 
   contato = {
     email: 'matheus.sbatista@outlook.com',
     telefone: '+55 (11) 95906-5798'
   };
+
+  ngAfterViewInit(): void {
+    const sections = document.querySelectorAll('.collapsible');
+    sections.forEach(section => {
+      const conteudo = section.querySelector('.collapsible-conteudo');
+      const header = section.querySelector('.collapsible-header');
+      header?.addEventListener('click', () => {
+        section.classList.toggle('active');
+      });
+      conteudo?.addEventListener('click', () => {
+        section.classList.remove('active');
+      });
+    });
+  }
 }
