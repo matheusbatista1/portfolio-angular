@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.urlAfterRedirects;
+        window.scrollTo(0, 0);
       }
     });
   }
