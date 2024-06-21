@@ -1,7 +1,7 @@
 @import '../../../../styles.scss';
 
 #container-scc-19{
-  padding-bottom: 300px;
+  padding-bottom: 350px;
   text-align: center;
   h1{
       text-align: center;
@@ -31,7 +31,7 @@
 
 @media (max-width:$breakpoint-lg) {
   #container-scc-19{
-      padding-bottom: 480px;
+      padding-bottom: 580px;
       text-align: left;
       .foto-trabalhos{
           width: 100%;
@@ -41,6 +41,6 @@
 
 @media (max-width: 375px){
   #container-scc-19{
-      padding-bottom: 520px;
+      padding-bottom: 620px;
   }
 }

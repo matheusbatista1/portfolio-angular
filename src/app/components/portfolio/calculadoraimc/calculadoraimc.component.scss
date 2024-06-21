@@ -1,7 +1,7 @@
 @import '../../../../styles.scss';
 
 #container-calculadoraIMC{
-  padding-bottom: 300px;
+  padding-bottom: 350px;
   text-align: center;
   h1{
       text-align: center;
@@ -41,7 +41,7 @@
 
 @media (max-width:$breakpoint-lg) {
   #container-calculadoraIMC{
-      padding-bottom: 480px;
+      padding-bottom: 580px;
       .foto-trabalhos{
           max-width: 400px;
           width: 80%;
@@ -59,6 +59,6 @@
 
 @media (max-width: 375px){
   #container-calculadoraIMC{
-      padding-bottom: 520px;
+      padding-bottom: 620px;
   }
 }
