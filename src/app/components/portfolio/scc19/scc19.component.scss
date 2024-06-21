@@ -9,6 +9,12 @@
   h2, p{
       text-align: justify;
   }
+
+  .fundo-conteudo{
+    padding: 20px;
+    border: solid 2px $cor-selecao;
+    background-color: #dddddd2a;
+  }
   .caminho{
       text-align: left;
   }

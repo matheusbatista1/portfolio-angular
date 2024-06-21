@@ -11,7 +11,7 @@ import { CalculadoraimcComponent } from './components/portfolio/calculadoraimc/c
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home | Matheus dos Santos Batista' } },
-  { path: 'portfolio', component: PortfolioComponent, data: { title: 'Portfolio | Matheus dos Santos Batista' } },
+  { path: 'portfolio', component: PortfolioComponent, data: { title: 'Portfólio | Matheus dos Santos Batista' } },
   { path: 'portfolio/scc19', component: Scc19Component, data: { title: 'SCC-19 | Matheus dos Santos Batista' } },
   { path: 'portfolio/calcpricing', component: CalcpricingComponent, data: { title: 'CalcPricing | Matheus dos Santos Batista' } },
   { path: 'portfolio/calculadora-imc', component: CalculadoraimcComponent, data: { title: 'Calculadora IMC | Matheus dos Santos Batista' } },

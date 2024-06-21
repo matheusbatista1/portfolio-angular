@@ -1,25 +1,56 @@
-@import '../../../styles.scss';
-.back-link{
+@import "../../../styles.scss";
+.back-link {
   position: relative;
   color: $cor-selecao;
   text-decoration: underline;
   top: 30px;
 }
 
-#container-contato{
+#container-contato {
   padding-bottom: 400px;
 }
 
+.fundo-conteudo {
+  padding: 20px;
+  display: flex;
+  border: solid 2px $cor-selecao;
+  background-color: #dddddd2a;
 
-
-@media (max-width:$breakpoint-lg) {
-  #container-contato{
-      padding-bottom: 480px;
+  &__logo-com-fundo{
+    img{
+      width: 150px;
+      float: inline-end;
+    }
+    margin: 70px;
+    width: 100% !important;
   }
 }
 
-@media (max-width: 375px){
-  #container-contato{
-      padding-bottom: 520px;
+@media (max-width: 1050px) {
+  .fundo-conteudo{
+    display: block;
+    &__logo-com-fundo{
+      img{
+        width: 150px;
+        float: none;
+      }
+      margin: 30px;
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  #container-contato {
+    padding-bottom: 480px;
+  }
+}
+
+@media (max-width: 375px) {
+  #container-contato {
+    padding-bottom: 520px;
+  }
+  .fundo-conteudo {
+    padding: 5px;
   }
 }

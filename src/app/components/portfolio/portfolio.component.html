@@ -4,10 +4,10 @@
   <ul class="caminho">
     <li><a routerLink="/">Home</a></li>
     <li> > </li>
-    <li class="caminho__atual">Portfolio</li>
+    <li class="caminho__atual">Portfólio</li>
   </ul>
 
-  <h1>Portfolio</h1>
+  <h1>Portfólio</h1>
 
   <div *ngFor="let projeto of projetos" class="miniatura" [style.backgroundImage]="'url(' + projeto.imagem + ')'">
     <a [routerLink]="projeto.link">
