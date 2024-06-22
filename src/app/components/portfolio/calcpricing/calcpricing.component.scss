@@ -1,7 +1,6 @@
 @import '../../../../styles.scss';
 
 #container-calcpricing{
-  padding-bottom: 350px;
   text-align: center;
   h1{
       text-align: center;
@@ -40,7 +39,6 @@
 
 @media (max-width:$breakpoint-lg) {
   #container-calcpricing{
-      padding-bottom: 580px;
       .foto-trabalhos{
           max-width: 400px;
           width: 80%;
@@ -53,11 +51,5 @@
       #foto-trabalhos-1-pc, #foto-trabalhos-2-pc, #foto-trabalhos-3-pc {
           display: none;
       }
-  }
-}
-
-@media (max-width: 375px){
-  #container-calcpricing{
-      padding-bottom: 620px;
   }
 }

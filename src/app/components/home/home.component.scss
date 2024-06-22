@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 .capa{
-  padding-bottom: 230px;
   div{
       display: inline-block;
       height: 650px;
@@ -49,7 +48,6 @@
 
 @media (max-width:$breakpoint-lg) {
   .capa{
-      padding-bottom: 580px;
       div{
           display: block;
           height: auto;
@@ -77,11 +75,5 @@
               margin-right: 20px;
           }
       }
-  }
-}
-
-@media (max-width: 375px){
-  .capa{
-      padding-bottom: 620px;
   }
 }

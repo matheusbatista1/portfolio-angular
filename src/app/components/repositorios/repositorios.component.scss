@@ -42,17 +42,18 @@
 }
 
 #repositorios-container {
-  max-height: 600px; /* Ajuste a altura máxima conforme necessário */
+  max-height: 600px;
+  min-height: 600px;
   overflow-y: auto;
   background-color: $cor-github;
   border: solid 1px $cor-selecao;
   border-radius: 6px;
   padding: 20px;
-  margin-top: 20px; /* Espaçamento opcional do topo */
+  margin-top: 20px;
+  position: relative;
 }
 #back-link-repos {
   padding-top: 0;
-  padding-bottom: 380px;
   .back-link{
     color: $cor-selecao;
   }
@@ -123,7 +124,6 @@
 
 @media (max-width: $breakpoint-lg) {
   #back-link-repos {
-    padding-bottom: 580px;
     color: $cor-selecao;
     padding-top: 0;
   }
@@ -137,7 +137,6 @@
 
 @media (max-width: 375px) {
   #back-link-repos {
-    padding-bottom: 620px;
     color: $cor-selecao;
   }
 }

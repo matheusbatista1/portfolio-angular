@@ -6,11 +6,12 @@ import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
 import { RepositoriosComponent } from './components/repositorios/repositorios.component';
 import { filter } from 'rxjs/operators';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, RepositoriosComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, RepositoriosComponent, LoadingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

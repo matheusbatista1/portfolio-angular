@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 #container-portfolio{
-  padding-bottom: 400px;
   padding-left: 250px;
   padding-right: 250px;
 }
@@ -47,7 +46,6 @@
 
 @media (max-width:$breakpoint-lg) {
   #container-portfolio{
-      padding-bottom: 580px;
       padding-left: 5%;
       padding-right: 5%;
   }
@@ -57,11 +55,5 @@
   }
   .blackbox{
       opacity: 0.8;
-  }
-}
-
-@media (max-width: 375px){
-  #container-portfolio{
-      padding-bottom: 620px;
   }
 }

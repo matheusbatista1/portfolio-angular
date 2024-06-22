@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RepositoriosService } from '../../service/repositorios/repositorios.service';
 import { RouterModule } from '@angular/router';
+import { LoadingComponent } from '../loading/loading.component';
+import { LoadingService } from '../../service/loading/loading.service';
 
 @Component({
   selector: 'app-repositorios',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule],
+  imports: [CommonModule, HttpClientModule, RouterModule, LoadingComponent],
   templateUrl: './repositorios.component.html',
   styleUrls: ['./repositorios.component.scss']
 })
@@ -16,19 +18,22 @@ export class RepositoriosComponent implements OnInit {
   currentPage = 1;
   itemsPerPage = 5;
 
-  constructor(private repositoriosService: RepositoriosService) { }
+  constructor(private repositoriosService: RepositoriosService, private loadingService: LoadingService) { }
 
   ngOnInit(): void {
     this.carregarRepositorios();
   }
 
   carregarRepositorios(): void {
+    this.loadingService.startLoading();
     this.repositoriosService.getRepositorios().subscribe(
       repositorios => {
         this.repositorios = repositorios;
+        this.loadingService.finishLoading();
       },
       error => {
         console.error('Erro ao carregar repositórios:', error);
+        this.loadingService.finishLoading();
       }
     );
   }

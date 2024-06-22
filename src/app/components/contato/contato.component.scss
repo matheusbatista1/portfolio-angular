@@ -6,10 +6,6 @@
   top: 30px;
 }
 
-#container-contato {
-  padding-bottom: 400px;
-}
-
 .fundo-conteudo {
   padding: 20px;
   display: flex;
@@ -40,16 +36,7 @@
   }
 }
 
-@media (max-width: $breakpoint-lg) {
-  #container-contato {
-    padding-bottom: 580px;
-  }
-}
-
 @media (max-width: 375px) {
-  #container-contato {
-    padding-bottom: 620px;
-  }
   .fundo-conteudo {
     padding: 5px;
   }

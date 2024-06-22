@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 #container-curriculo {
-  padding-bottom: 350px;
   .back-link{
     color: $cor-selecao;
   }
@@ -62,8 +61,6 @@
 
 @media (max-width: $breakpoint-lg) {
   #container-curriculo {
-    padding-bottom: 580px;
-
     p {
       text-align: left;
       line-height: 30px;
@@ -74,11 +71,5 @@
       max-width: 100%;
       margin-right: 0px;
     }
-  }
-}
-
-@media (max-width: 375px) {
-  #container-curriculo {
-    padding-bottom: 620px;
   }
 }
