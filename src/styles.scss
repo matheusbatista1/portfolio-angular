@@ -91,7 +91,6 @@ body{
   background-color: $cor-fundo;
   font-family: 'Montserrat', monospace;
   font-weight: 200;
-  display: flex;
   min-height: 100vh;
 }
 
@@ -186,6 +185,3 @@ body{
       background-color: rgb(8, 8, 49);
   }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
