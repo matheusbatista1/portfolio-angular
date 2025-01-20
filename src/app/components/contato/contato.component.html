@@ -45,5 +45,11 @@
       <img  src="../../../assets/img/logo-com-fundo.webp" alt="Logo com Fundo">
     </div>
   </div>
+
+  <div>
+    <button (click)="openMessageModal()">Enviar Mensagem</button>
+    <app-message-modal #messageModal></app-message-modal>
+  </div>
+
   <a class="back-link" routerLink="/">&larr; Voltar ao início</a>
 </div>

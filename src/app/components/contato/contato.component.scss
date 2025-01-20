@@ -41,3 +41,39 @@
     padding: 5px;
   }
 }
+
+button {
+  background-color: $cor-selecao;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($cor-selecao, 10%);
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+  }
+}
+
