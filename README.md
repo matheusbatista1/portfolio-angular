@@ -1,8 +1,10 @@
 # portfolio-angular
 
-Matheus Batista's personal portfolio, built with **Angular 17** and server-side rendering (Angular Universal / SSR).
+> # ⚠️ Obsolete — kept for reference only
+>
+> This is my **previous** portfolio, built with Angular 17. It is **no longer maintained** and has been **fully replaced** by **[matheusbatista-tech](https://github.com/matheusbatista1/matheusbatista-tech)** (Next.js) — live at **[matheusbatistadev.com](https://matheusbatistadev.com)**.
 
-> **Note:** This is an earlier version of my portfolio. It has since been replaced by a newer build, [matheusbatista-tech](https://github.com/matheusbatista1/matheusbatista-tech), made with Next.js. This repository is kept as a reference to the previous Angular implementation and is no longer actively developed.
+Matheus Batista's personal portfolio, built with **Angular 17** and server-side rendering (Angular Universal / SSR). Kept as a historical reference to the previous Angular implementation.
 
 ## Tech stack
 
